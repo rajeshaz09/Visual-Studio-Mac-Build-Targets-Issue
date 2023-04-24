@@ -2,7 +2,7 @@ using Microsoft.Data.Sqlite;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
-PerformDbOperations();
+
 
 app.MapGet("/", () => new
 {
@@ -86,5 +86,4 @@ void PerformDbOperations()
 
     // Clean up
     File.Delete("hello.db");
-}
 }
