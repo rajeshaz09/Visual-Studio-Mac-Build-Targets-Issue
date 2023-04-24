@@ -1,0 +1,39 @@
+﻿<Project>
+  <!--.NET7-->
+  <PropertyGroup>
+    <DotNet7>7.0.*</DotNet7>
+    <MicrosoftExtensionsV7>7.0.*</MicrosoftExtensionsV7>
+    <DotNetTest7>17.*</DotNetTest7>
+  </PropertyGroup>
+
+
+  <!-- .NET7-->
+  <ItemGroup Condition="'$(TargetFrameworkVersion)'=='v7.0'">
+
+    <!--Tests -->
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="$(DotNetTest7)" />
+
+    <!--Microsoft Dotnet Extensions -->
+    <PackageReference Update="Microsoft.Extensions.Caching.Memory" Version="$(MicrosoftExtensionsV7)" />
+    <PackageReference Update="Microsoft.Extensions.Hosting.Abstractions" Version="$(MicrosoftExtensionsV7)" />
+    <PackageReference Update="Microsoft.Extensions.Options" Version="$(MicrosoftExtensionsV7)" />
+    <PackageReference Update="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(MicrosoftExtensionsV7)" />
+    <PackageReference Update="Microsoft.Extensions.Hosting.WindowsServices" Version="$(MicrosoftExtensionsV7)" />
+    <PackageReference Update="Microsoft.Extensions.Http" Version="$(MicrosoftExtensionsV7)" />
+    <PackageReference Update="Microsoft.Extensions.Logging" Version="$(MicrosoftExtensionsV7)" />
+    <PackageReference Update="Microsoft.Extensions.Logging.EventLog" Version="$(MicrosoftExtensionsV7)" />
+  </ItemGroup>
+
+  <!--Common-->
+  <ItemGroup>
+
+    <!--Microsoft DotNet -->
+    <PackageReference Update="Microsoft.AspNetCore.Components.WebAssembly" Version="$(DotNet7)" />
+    <PackageReference Update="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(DotNet7)"  PrivateAssets="all" />
+
+    <!--Microsoft libraries -->
+    <PackageReference Update="Microsoft.Data.Sqlite" Version="$(DotNet7)" />
+
+
+  </ItemGroup>
+</Project>
